@@ -22,7 +22,8 @@ apt-get install lxc-docker
 The first run will pull the container image down to your local machine.
 
 ``` bash
-sudo docker run -d --restart=always --net="host" --name="airsonos" -p 5000-5050:5000-5050/tcp justintime/airsonos
+sudo docker run -d --restart=always --net="host" --name="airsonos" \
+  -p 5000-5050:5000-5050/tcp justintime/airsonos
 ```
 
 ## Notes on running the container

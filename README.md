@@ -21,7 +21,10 @@ apt-get install lxc-docker
 # Running the airsonos container
 The first run will pull the container image down to your local machine.
 
+``` bash
+sudo docker run -d --restart=always --net="host" --name="airsonos" -p 5000-5050:5000-5050/tcp -p 5000-5050:8000-8050/tcp justintime/airsonos
 ```
-docker run -d --restart=always --net="host" --name="airsonos" -p 5000-5050:5000-5050/tcp -p 5000-5050:8000-8050/tcp justintime/airsonos
-```
+
+## Notes on running the container
+Because the discovery mechanism uses mdns, you have to use ```--net="host"``` in order for discovery of your Sonos devices to work properly.  Since AirSonos binds to random ports between 5000 and 5050, it's best to publish them all.
 

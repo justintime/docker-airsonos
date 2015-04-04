@@ -8,7 +8,7 @@ There isn't really any installation, but you need to have Docker installed.  Con
 
 ## Install docker on Ubuntu 14.04
 To install Docker on a fresh install of Ubuntu 14.04 Server:
-``` bash
+```
 sudo su -
 [ -e /usr/lib/apt/methods/https ] || {   apt-get update;  \
   apt-get install apt-transport-https; }

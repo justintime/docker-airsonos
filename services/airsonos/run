@@ -1,3 +1,6 @@
 #!/bin/bash
 
+# Exit with an error until avahi is available
+sv start avahi || exit 1
+
 exec /sbin/setuser nobody airsonos

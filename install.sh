@@ -8,7 +8,7 @@
 #ln -s -f /bin/true /usr/bin/chfn
 
 # nodetunes wants 0.12
-curl -sL https://deb.nodesource.com/setup_4.x | bash -
+curl -sL https://deb.nodesource.com/setup_0.12 | bash -
 
 apt-get -q update && apt-get install -qy \
   build-essential \

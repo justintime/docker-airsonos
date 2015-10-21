@@ -17,9 +17,6 @@ apt-get -q update && apt-get install -qy \
   git \
   nodejs
 
-# Grab latest npm
-sudo npm install npm -g
-
 # Fix avahi-daemon not working without dbus
 #sed -i -e "s#\#enable-dbus=yes#enable-dbus=false#g" /etc/avahi/avahi-daemon.conf
 #sed -i -e "s/^rlimit-nproc/#rlimit-nproc/g" /etc/avahi/avahi-daemon.conf

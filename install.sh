@@ -7,7 +7,8 @@
 #rm /usr/bin/chfn
 #ln -s -f /bin/true /usr/bin/chfn
 
-curl -sL https://deb.nodesource.com/setup | sudo bash -
+# nodetunes wants 0.12
+curl -sL https://deb.nodesource.com/setup_0.12 | bash -
 
 apt-get -q update && apt-get install -qy \
   build-essential \
@@ -15,6 +16,9 @@ apt-get -q update && apt-get install -qy \
   libasound2-dev \
   git \
   nodejs
+
+# Grab latest npm
+sudo npm install npm -g
 
 # Fix avahi-daemon not working without dbus
 #sed -i -e "s#\#enable-dbus=yes#enable-dbus=false#g" /etc/avahi/avahi-daemon.conf

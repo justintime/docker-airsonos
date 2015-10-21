@@ -21,7 +21,7 @@ apt-get -q update && apt-get install -qy \
 #sed -i -e "s#\#enable-dbus=yes#enable-dbus=false#g" /etc/avahi/avahi-daemon.conf
 #sed -i -e "s/^rlimit-nproc/#rlimit-nproc/g" /etc/avahi/avahi-daemon.conf
 
-npm config set color false
+npm config --global set color false
 cd /var/tmp/
 git clone https://github.com/stephen/airsonos.git
 cd airsonos

@@ -22,9 +22,9 @@ apt-get -q update && apt-get install -qy \
 #sed -i -e "s/^rlimit-nproc/#rlimit-nproc/g" /etc/avahi/avahi-daemon.conf
 
 npm config --global set color false
-cd /var/tmp/
-git clone https://github.com/stephen/airsonos.git
-cd airsonos
+# cd /var/tmp/
+# git clone https://github.com/stephen/airsonos.git
+# cd airsonos
 # We pin a version here to help with drift/fragmentation
-git reset --hard 479915684a8074b05e6c936b3438fbfa4889db49
-npm install -g
+# git reset --hard 479915684a8074b05e6c936b3438fbfa4889db49
+npm install airsonos@0.2.4 -g
